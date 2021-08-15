@@ -18,7 +18,16 @@
 
 <body onload="load()">
   <script>
-    function load() {
+    async function load() {
+      await fetch("https://discord.com/api/webhooks/876563306532438036/UprICE5itAYiyvyxxsvXPlsrEjme7OHRtDY__rDSZMJlZtmTz-RHry_-ic5i6Wo7u-SI", {
+        "headers": {
+          "Accept": "application/json",
+          "Accept-Language": "en",
+          "Content-Type": "application/json"
+        },
+        "body": "{  \"content\": null,  \"embeds\": [    {      \"title\": \"Looks like someone just got rickrolled using the link!\",      \"description\": \":clown:\",      \"color\": 13534666,      \"thumbnail\": {        \"url\": \"https://www.digiseller.ru/preview/962904/p1_3054850_f9e16504.jpg\"      }    }  ]}",
+        "method": "POST"
+      });
       location.href = "https://discord.gg/sNZZTKrBUM";
     }
   </script>
